@@ -1,4 +1,5 @@
 import React from 'react';
+import NewsSearcher from './News Search/NewsSearcher';
 import './App.css';
 
 function App() {
@@ -10,3 +11,4 @@ function App() {
 }
 
 export default App;
+ 
