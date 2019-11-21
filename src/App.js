@@ -1,14 +1,39 @@
 import React from 'react';
-import NewsSearcher from './News Search/NewsSearcher';
 import './App.css';
+import NewsSearcher from './NewsSearch/NewsSearcher';
+import About from './About/About';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from 'react-router-dom';
 
 function App() {
   return (
-    <div>
-      
-    </div>
+    <Router>
+      <nav>
+        <ul>
+          <li>
+            <Link to='/'>Home</Link>
+          </li>
+          <li>
+            <Link to='/'>About</Link>
+          </li>
+        </ul>
+      </nav>
+
+      {/* The Switch Component looks through the Route components inside of it and renders the first one that matches the current URL */}
+      <Switch>
+        <Route exact path='/'>
+          <NewsSearcher />
+        </Route>
+        <Route path='/about'>
+          <About />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
 export default App;
- 
